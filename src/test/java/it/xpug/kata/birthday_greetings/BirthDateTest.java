@@ -6,20 +6,20 @@ import org.junit.*;
 
 
 
-public class XDateTest {
+public class BirthDateTest {
 	@Test
 	public void getters() throws Exception {
-		XDate date = new XDate("1789/01/24");
+		BirthDate date = new BirthDate("1789/01/24");
 		assertEquals(1, date.getMonth());
 		assertEquals(24, date.getDay());
 	}
 
 	@Test
 	public void isSameDate() throws Exception {
-		XDate date = new XDate("1789/01/24");
-		XDate sameDay = new XDate("2001/01/24");
-		XDate notSameDay = new XDate("1789/01/25");
-		XDate notSameMonth = new XDate("1789/02/25");
+		BirthDate date = new BirthDate("1789/01/24");
+		BirthDate sameDay = new BirthDate("2001/01/24");
+		BirthDate notSameDay = new BirthDate("1789/01/25");
+		BirthDate notSameMonth = new BirthDate("1789/02/25");
 
 		assertTrue("same", date.isSameDay(sameDay));
 		assertFalse("not same day", date.isSameDay(notSameDay));
@@ -28,9 +28,9 @@ public class XDateTest {
 
 	@Test
 	public void equality() throws Exception {
-		XDate base = new XDate("2000/01/02");
-		XDate same = new XDate("2000/01/02");
-		XDate different = new XDate("2000/01/04");
+		BirthDate base = new BirthDate("2000/01/02");
+		BirthDate same = new BirthDate("2000/01/02");
+		BirthDate different = new BirthDate("2000/01/04");
 
 		assertFalse(base.equals(null));
 		assertFalse(base.equals(""));
